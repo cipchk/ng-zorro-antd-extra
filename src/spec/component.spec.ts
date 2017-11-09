@@ -1,26 +1,22 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaginationModule } from 'ng-list-antd';
+import { NzListModule } from 'ng-list-antd';
 
 const html = ``;
 
 describe('Component: ng-list-antd', () => {
-  let fixture:ComponentFixture<any>;
-  let context:TestNGComponent;
-  let element:any;
-  let clean:any;
+  let fixture: ComponentFixture<any>;
+  let context: TestNGComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TestNGComponent],
-      imports: [PaginationModule]
+      imports: [NzListModule]
     });
     TestBed.overrideComponent(TestNGComponent, {set: {template: html}});
     fixture = TestBed.createComponent(TestNGComponent);
     context = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('#c1');
-    clean = fixture.nativeElement.querySelector('#c2');
     fixture.detectChanges();
   });
 
