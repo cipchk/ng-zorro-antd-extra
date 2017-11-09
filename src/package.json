@@ -1,0 +1,6 @@
+{
+  "name": "ng-list-antd",
+  "peerDependencies": {
+      "ng-zorro-antd": "^0.5.0"
+  }
+}
