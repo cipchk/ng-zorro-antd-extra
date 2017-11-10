@@ -15,15 +15,12 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
                     <nz-list-item>
                         <nz-list-item-action><a (click)="edit(item)">edit</a></nz-list-item-action>
                         <nz-list-item-action><a (click)="edit(item)">more</a></nz-list-item-action>
-                        <nz-list-item-meta>
-                            <ng-template #nzAvatar>
-                                <nz-avatar [nzSrc]="'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'"></nz-avatar>
-                            </ng-template>
+                        <nz-list-item-meta
+                            [nzTitle]="nzTitle"
+                            nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                            nzDescription="Ant Design, a design language for background applications, is refined by Ant UED Team">
                             <ng-template #nzTitle>
                                 <a href="https://ng.ant.design">{{item.name.last}}</a>
-                            </ng-template>
-                            <ng-template #nzDescription>
-                                Ant Design, a design language for background applications, is refined by Ant UED Team
                             </ng-template>
                         </nz-list-item-meta>
                         <div>content</div>

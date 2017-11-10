@@ -94,8 +94,8 @@ export class DemoBasicComponent {
 | nzBordered | `boolean` | `false` | Toggles rendering of the border around the list |
 | nzGrid | `NzListGrid` |  | The grid type of list. You can set grid to something like `{ gutter: 16, span: 6 }` |
 | nzItem | `TemplateRef<any>` |  | List item renderer |
-| nzHeader | `TemplateRef<any>` |  | List header renderer |
-| nzFooter | `TemplateRef<any>` |  | List footer renderer |
+| nzHeader | `string | TemplateRef<any>` |  | List header renderer |
+| nzFooter | `string | TemplateRef<any>` |  | List footer renderer |
 | nzSize | `default,small,large` | `default` | Size of list |
 | nzItemLayout | `horizontal,vertical` | `horizontal` | The layout of list, default is `horizontal`, If a vertical list is desired, set the itemLayout property to `vertical` |
 | nzLoading | `boolean` |  | Shows a loading indicator while the contents of the list are being fetched |
@@ -120,8 +120,8 @@ export class DemoBasicComponent {
 
 | Name    | Type           | Default  | Summary |
 | ------- | ------------- | ----- | ----- |
-| nzContent | `TemplateRef<any>` |  | Content renderer |
-| nzExtra | `TemplateRef<any>` |  | The extra content of list item. If `itemLayout` is `vertical`, shows the content on right, otherwise shows content on the far right. |
+| nzContent | `string | TemplateRef<any>` |  | Content renderer |
+| nzExtra | `string | TemplateRef<any>` |  | The extra content of list item. If `itemLayout` is `vertical`, shows the content on right, otherwise shows content on the far right. |
 
 ### `nz-list-item-action`
 
@@ -131,9 +131,9 @@ The actions content of list item. If itemLayout is vertical, shows the content o
 
 | Name    | Type           | Default  | Summary |
 | ------- | ------------- | ----- | ----- |
-| nzAvatar | `TemplateRef<any>` |  | The avatar of list item |
-| nzDescription | `TemplateRef<any>` |  | The description of list item |
-| nzTitle | `TemplateRef<any>` |  | The title of list item |
+| nzAvatar | `string | TemplateRef<any>` |  | The avatar of list item |
+| nzDescription | `string | TemplateRef<any>` |  | The description of list item |
+| nzTitle | `string | TemplateRef<any>` |  | The title of list item |
 
 ## Troubleshooting
 

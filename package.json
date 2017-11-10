@@ -1,6 +1,6 @@
 {
   "name": "ng-list-antd",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "main": "index.js",
   "typings": "index.d.ts",
   "description": "A simplify list of antd.",

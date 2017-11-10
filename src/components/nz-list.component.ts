@@ -29,8 +29,9 @@ export interface NzListGrid {
                 [ngTemplateOutletContext]="{ $implicit: item, item: item, index: index }"></ng-template>
         </ng-container>
     </ng-template>
-    <div *ngIf="nzHeader" class="ant-list-header">
-        <ng-template [ngTemplateOutlet]="nzHeader"></ng-template>
+    <div *ngIf="header" class="ant-list-header">
+        <ng-template #defaultHeaderContent>{{_header}}</ng-template>
+        <ng-template [ngTemplateOutlet]="_headerTpl || defaultHeaderContent"></ng-template>
     </div>
     <nz-spin [nzSpinning]="nzLoading">
         <div *ngIf="nzGrid; else itemsTpl" nz-row [nzGutter]="nzGrid.gutter">
@@ -47,8 +48,9 @@ export interface NzListGrid {
     <div *ngIf="nzPagination" class="ant-list-pagination">
         <ng-template [ngTemplateOutlet]="nzPagination"></ng-template>
     </div>
-    <div *ngIf="nzFooter" class="ant-list-footer">
-        <ng-template [ngTemplateOutlet]="nzFooter"></ng-template>
+    <div *ngIf="footer" class="ant-list-footer">
+        <ng-template #defaultFooterContent>{{_footer}}</ng-template>
+        <ng-template [ngTemplateOutlet]="_footerTpl || defaultFooterContent"></ng-template>
     </div>
     `,
     styleUrls: [
@@ -64,8 +66,33 @@ export class NzListComponent implements OnChanges, OnInit {
     @Input() nzDataSource: any[] = [];
     @Input() nzBordered = false;
     @Input() nzGrid: NzListGrid;
-    @ContentChild('nzHeader') nzHeader: TemplateRef<any>;
-    @ContentChild('nzFooter') nzFooter: TemplateRef<any>;
+
+    header = false;
+    _header = '';
+    _headerTpl: TemplateRef<any>;
+    @Input()
+    set nzHeader(value: string | TemplateRef<any>) {
+        if (value instanceof TemplateRef)
+            this._headerTpl = value;
+        else
+            this._header = value;
+
+        this.header = !!value;
+    }
+
+    footer = false;
+    _footer = '';
+    _footerTpl: TemplateRef<any>;
+    @Input()
+    set nzFooter(value: string | TemplateRef<any>) {
+        if (value instanceof TemplateRef)
+            this._footerTpl = value;
+        else
+            this._footer = value;
+
+        this.footer = !!value;
+    }
+
     @ContentChild('nzItem') nzItem: TemplateRef<any>;
     @Input() nzSize: 'default' | 'small' | 'large' = 'default';
     @Input() nzItemLayout: 'vertical' | 'horizontal' = 'horizontal';

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NzSpinModule, NzGridModule } from 'ng-zorro-antd';
+import { NzSpinModule, NzGridModule, NzAvatarModule } from 'ng-zorro-antd';
 
 import { NzListComponent } from './components/nz-list.component';
 import { NzListItemComponent } from './components/nz-list-item.component';
@@ -13,7 +13,7 @@ export { NzListItemActionComponent } from './components/nz-list-item-action.comp
 export { NzListItemMetaComponent } from './components/nz-list-item-meta.component';
 
 @NgModule({
-    imports:        [ CommonModule, NzSpinModule, NzGridModule ],
+    imports:        [ CommonModule, NzSpinModule, NzGridModule, NzAvatarModule ],
     declarations:   [ NzListComponent, NzListItemComponent, NzListItemMetaComponent, NzListItemActionComponent ],
     exports:        [ NzListComponent, NzListItemComponent, NzListItemMetaComponent, NzListItemActionComponent ]
 })

@@ -8,18 +8,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzItemLayout]="'vertical'">
                 <ng-template #nzItem let-item>
-                    <nz-list-item>
+                    <nz-list-item [nzContent]="item.content" [nzExtra]="nzExtra">
                         <nz-list-item-action><i class="anticon anticon-star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
                         <nz-list-item-action><i class="anticon anticon-like-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
                         <nz-list-item-action><i class="anticon anticon-message" style="margin-right: 8px;"></i> 2</nz-list-item-action>
-                        <nz-list-item-meta>
-                            <ng-template #nzAvatar>
-                                <nz-avatar [nzSrc]="item.avatar"></nz-avatar>
-                            </ng-template>
+                        <nz-list-item-meta
+                            [nzAvatar]="item.avatar"
+                            [nzTitle]="nzTitle"
+                            [nzDescription]="item.description">
                             <ng-template #nzTitle><a href="{{item.href}}">{{item.title}}</a></ng-template>
-                            <ng-template #nzDescription>{{item.description}}</ng-template>
                         </nz-list-item-meta>
-                        <ng-template #nzContent>{{item.content}}</ng-template>
                         <ng-template #nzExtra>
                             <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png">
                         </ng-template>

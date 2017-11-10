@@ -9,9 +9,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         <div nz-row [nzGutter]="16">
             <div nz-col [nzSpan]="8">
                 <h3>Default Size <button nz-button (click)="setLoading()" [nzSize]="'small'">Loading</button></h3>
-                <nz-list [nzDataSource]="data" [nzBordered]="true" [nzLoading]="loading">
-                    <ng-template #nzHeader>Header</ng-template>
-                    <ng-template #nzFooter>Footer</ng-template>
+                <nz-list [nzDataSource]="data" [nzBordered]="true" [nzLoading]="loading"
+                         [nzHeader]="'Header'" [nzFooter]="'Footer'">
                     <ng-template #nzItem let-item>
                         <nz-list-item>{{item}}</nz-list-item>
                     </ng-template>
@@ -19,9 +18,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
             </div>
             <div nz-col [nzSpan]="8">
                 <h3>Small Size</h3>
-                <nz-list [nzDataSource]="data" [nzBordered]="true" [nzLoading]="loading" [nzSize]="'small'">
-                    <ng-template #nzHeader>Header</ng-template>
-                    <ng-template #nzFooter>Footer</ng-template>
+                <nz-list [nzDataSource]="data" [nzBordered]="true" [nzLoading]="loading" [nzSize]="'small'"
+                         [nzHeader]="'Header'" [nzFooter]="'Footer'">
                     <ng-template #nzItem let-item>
                         <nz-list-item>{{item}}</nz-list-item>
                     </ng-template>
@@ -29,9 +27,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
             </div>
             <div nz-col [nzSpan]="8">
                 <h3>Large Size</h3>
-                <nz-list [nzDataSource]="data" [nzBordered]="true" [nzLoading]="loading" [nzSize]="'large'">
-                    <ng-template #nzHeader>Header</ng-template>
-                    <ng-template #nzFooter>Footer</ng-template>
+                <nz-list [nzDataSource]="data" [nzBordered]="true" [nzLoading]="loading" [nzSize]="'large'"
+                         [nzHeader]="'Header'" [nzFooter]="'Footer'">
                     <ng-template #nzItem let-item>
                         <nz-list-item>{{item}}</nz-list-item>
                     </ng-template>
