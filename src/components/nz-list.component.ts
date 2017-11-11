@@ -108,7 +108,7 @@ export class NzListComponent implements OnChanges, OnInit {
     _classList: string[] = [];
 
     _setClassMap() {
-        this._renderer.removeAttribute(this._elementRef.nativeElement, 'class');
+        this._classList.forEach(cls => this._renderer.removeClass(this._el.nativeElement, cls));
 
         this._classList = [
             this._prefixCls,
@@ -122,14 +122,12 @@ export class NzListComponent implements OnChanges, OnInit {
             !!(this.nzLoadMore || this.nzPagination || this.nzFooter) && `${this._prefixCls}-something-after-last-item`
         ].filter(item => !!item);
 
-        this._classList.forEach(_className => {
-            this._renderer.addClass(this._elementRef.nativeElement, _className);
-        });
+        this._classList.forEach(cls => this._renderer.addClass(this._el.nativeElement, cls));
     }
 
     // endregion
 
-    constructor(private _elementRef: ElementRef, private _renderer: Renderer2) { }
+    constructor(private _el: ElementRef, private _renderer: Renderer2) { }
 
     ngOnInit(): void {
     }
