@@ -3,7 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'demo-nz-card-customized',
   template: `
-    <h4>customized</h4>
+    <h4>customized <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card-v3/customized.component.ts" target="_blank">source</a></h4>
     <nz-card-v3 nzHoverable style="width: 240px">
         <ng-template #cover>
             <img src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png">

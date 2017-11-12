@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'demo-nz-list-grid',
   template: `
     <nz-card>
-        <ng-template #title>Grid</ng-template>
+        <ng-template #title>Grid <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-list/grid.component.ts" target="_blank">source</a></ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzGrid]="{gutter: 16, span: 6}">
                 <ng-template #item let-item>

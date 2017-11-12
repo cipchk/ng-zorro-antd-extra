@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'demo-nz-list-vertical',
   template: `
     <nz-card>
-        <ng-template #title>Basic list</ng-template>
+        <ng-template #title>Vertical <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-list/vertical.component.ts" target="_blank">source</a></ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzItemLayout]="'vertical'">
                 <ng-template #item let-item>

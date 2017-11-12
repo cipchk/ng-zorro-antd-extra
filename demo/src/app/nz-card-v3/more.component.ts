@@ -4,7 +4,7 @@ import { NzMessageService } from 'ng-zorro-antd';
 @Component({
   selector: 'demo-nz-card-more',
   template: `
-    <h4>Support more content configuration <a href="" target="_blank">source</a></h4>
+    <h4>Support more content configuration <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card-v3/more.component.ts" target="_blank">source</a></h4>
     <nz-card-v3 style="width: 300px">
         <ng-template #cover>
             <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png">

@@ -8,7 +8,7 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
   selector: 'demo-nz-list-loadmore',
   template: `
     <nz-card>
-        <ng-template #title>Basic list</ng-template>
+        <ng-template #title>Loadmore <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-list/loadmore.component.ts" target="_blank">source</a></ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzItemLayout]="'horizontal'" [nzLoading]="loading">
                 <ng-template #item let-item>

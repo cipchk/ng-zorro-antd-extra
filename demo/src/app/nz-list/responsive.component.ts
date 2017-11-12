@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'demo-nz-list-responsive',
   template: `
     <nz-card>
-        <ng-template #title>Responsive</ng-template>
+        <ng-template #title>Responsive <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-list/responsive.component.ts" target="_blank">source</a></ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzGrid]="{gutter: 16, xs: 24, sm: 12, md: 6, lg: 6, xl: 4 }">
                 <ng-template #item let-item>

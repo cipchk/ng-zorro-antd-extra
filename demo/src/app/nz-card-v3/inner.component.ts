@@ -4,7 +4,7 @@ import { NzMessageService } from 'ng-zorro-antd';
 @Component({
   selector: 'demo-nz-card-inner',
   template: `
-    <h4>inner</h4>
+    <h4>inner <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card-v3/inner.component.ts" target="_blank">source</a></h4>
     <nz-card-v3 [nzTitle]="'Card title'">
         <h5 style="font-size: 14px; margin-bottom: 8px;">Group title</h5>
         <nz-card-v3 nzType="inner" [nzTitle]="'Inner Card title'">

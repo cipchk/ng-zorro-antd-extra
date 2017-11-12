@@ -4,7 +4,7 @@ import { NzMessageService } from 'ng-zorro-antd';
 @Component({
   selector: 'demo-nz-card-tab',
   template: `
-    <h4>tab</h4>
+    <h4>tab <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card-v3/tab.component.ts" target="_blank">source</a></h4>
     <nz-card-v3 [nzTitle]="'Card title'" style="margin-bottom: 16px">
         <ng-template #extra>
             <a (click)="msg.success('more')">More</a>

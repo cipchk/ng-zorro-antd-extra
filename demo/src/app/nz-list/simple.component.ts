@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'demo-nz-list-simple',
   template: `
 <nz-card>
-    <ng-template #title>Simple list</ng-template>
+    <ng-template #title>Simple list <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-list/simple.component.ts" target="_blank">source</a></ng-template>
     <ng-template #body>
         <div nz-row [nzGutter]="16">
             <div nz-col [nzSpan]="8">
