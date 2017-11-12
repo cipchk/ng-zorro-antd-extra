@@ -1,7 +1,7 @@
-<div *ngIf="title || extra || tabList?.length > 0" class="ant-card-head">
+<div *ngIf="_titleHas || title || extra || tabList?.length > 0" class="ant-card-head">
     <div class="ant-card-head-wrapper">
-        <div *ngIf="title" class="ant-card-head-title">
-            <ng-container *ngIf="_title; else _titleTpl">{{ _title }}</ng-container>
+        <div *ngIf="_titleHas || title" class="ant-card-head-title">
+            <ng-container *ngIf="_title; else (title || _titleTpl)">{{ _title }}</ng-container>
         </div>
         <div *ngIf="extra" class="ant-card-extra">
             <ng-template [ngTemplateOutlet]="extra"></ng-template>

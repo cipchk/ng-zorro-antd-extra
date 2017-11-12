@@ -12,6 +12,7 @@
 | nzLoading | `boolean` |  | 是否显示加载状态 |
 | nzType | `inner` |  | 卡片类型，可设置为 `inner` 或 不设置 |
 | nzTitle | `string, TemplateRef<any>` |  | 卡片标题 |
+| [过期] #title | `TemplateRef<any>` |  | 卡片标题，请尽可能使用 `nzTitle` |
 | #extra | `TemplateRef<any>` |  | 卡片右上角的操作区域 |
 | #cover | `TemplateRef<any>` |  | 卡片封面区域 |
 | #body | `TemplateRef<any>` |  | 内容区域，默认情况下也可以无须指定，因为 `<ng-content>` 内容都被认为是内容区域 |

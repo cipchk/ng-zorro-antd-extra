@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
             <demo-nz-card-grid></demo-nz-card-grid>
         </div>
     </div>
-    <div nz-row [nzGutter]="32">
+    <div nz-row [nzGutter]="32" style="margin-bottom: 16px;">
         <div nz-col [nzSpan]="8">
             <demo-nz-card-inner></demo-nz-card-inner>
         </div>
@@ -39,6 +39,15 @@ import { Component } from '@angular/core';
         </div>
         <div nz-col [nzSpan]="8">
             <demo-nz-card-more></demo-nz-card-more>
+        </div>
+    </div>
+    <div nz-row [nzGutter]="32">
+        <div nz-col [nzSpan]="8">
+            <demo-nz-card-compatible></demo-nz-card-compatible>
+        </div>
+        <div nz-col [nzSpan]="8">
+        </div>
+        <div nz-col [nzSpan]="8">
         </div>
     </div>
     `

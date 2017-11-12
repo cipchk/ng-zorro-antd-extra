@@ -32,6 +32,7 @@ import { DemoNzCardColumnComponent } from './nz-card-v3/column.component';
 import { DemoNzCardLoadingComponent } from './nz-card-v3/loading.component';
 import { DemoNzCardGridComponent } from './nz-card-v3/grid.component';
 import { DemoNzCardMoreComponent } from './nz-card-v3/more.component';
+import { DemoNzCardCompatibleComponent } from './nz-card-v3/compatible.component';
 // nz-divider
 import { DemoNzDividerComponent } from './nz-divider/nz-divider.component';
 import { DemoNzDividerHorizontalComponent } from './nz-divider/horizontal.component';
@@ -77,6 +78,7 @@ import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component'
         DemoNzCardTabComponent,
         DemoNzCardInnerComponent,
         DemoNzCardMoreComponent,
+        DemoNzCardCompatibleComponent,
         // nz-divider
         DemoNzDividerComponent,
         DemoNzDividerHorizontalComponent,

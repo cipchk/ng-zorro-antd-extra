@@ -28,7 +28,7 @@ export class NzCardV3Component implements OnInit, OnChanges, AfterViewInit {
 
     @Input() nzType?: 'inner';
 
-    title = false;
+    _titleHas = false;
     _title = '';
     _titleTpl: TemplateRef<any>;
     @Input()
@@ -38,8 +38,11 @@ export class NzCardV3Component implements OnInit, OnChanges, AfterViewInit {
         else
             this._title = value;
 
-        this.title = !!value;
+        this._titleHas = !!value;
     }
+
+    // @deprecated 过期属性，请使用 `nzTitle`
+    @ContentChild('title') title: TemplateRef<any>;
 
     @ContentChild('extra') extra: TemplateRef<any>;
 
