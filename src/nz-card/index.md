@@ -1,4 +1,4 @@
-> 由于组件名可能跟 2.x 会有所冲突，因此会有 `v3` 字样。
+> 由于组件名可能跟 2.x 会有所冲突，因此建议[按需加载](../../demo/src/app/app.module.ts) `ng-zorro-antd` 并排除 `nz-card`。
 
 ## API
 
@@ -23,7 +23,7 @@
 
 操作区域组件，放置在内容区域中，使用方式见示例。
 
-### `nz-card-v3-grid`
+### `nz-card-grid`
 
 网格型内嵌卡片。
 
@@ -46,9 +46,9 @@
 ## DEMO
 
 ```html
-<nz-card-v3 [nzTitle]="'Card title'">
+<nz-card [nzTitle]="'Card title'">
     <p>Card content</p>
     <p>Card content</p>
     <p>Card content</p>
-</nz-card-v3>
+</nz-card>
 ```

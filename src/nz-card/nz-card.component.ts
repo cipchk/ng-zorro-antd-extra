@@ -1,10 +1,10 @@
 import { Component, ViewEncapsulation, TemplateRef, Input, ContentChildren, QueryList, OnInit, AfterViewInit, ElementRef, Renderer2, OnChanges, SimpleChanges, ContentChild, EventEmitter, Output } from '@angular/core';
 import { NzCardTabComponent } from './nz-card-tab.component';
-import { NzCardGridV3Directive } from './nz-card-grid.directive';
+import { NzCardGridDirective } from './nz-card-grid.directive';
 import { NzCardActionComponent } from './nz-card-action.component';
 
 @Component({
-    selector: 'nz-card-v3',
+    selector: 'nz-card',
     templateUrl: './nz-card.component.html',
     styleUrls: [
         // todo: ngm-cli not supported less
@@ -13,7 +13,7 @@ import { NzCardActionComponent } from './nz-card-action.component';
     ],
     encapsulation: ViewEncapsulation.None
 })
-export class NzCardV3Component implements OnInit, OnChanges, AfterViewInit {
+export class NzCardComponent implements OnInit, OnChanges, AfterViewInit {
 
     // region: fieds
 
@@ -56,7 +56,7 @@ export class NzCardV3Component implements OnInit, OnChanges, AfterViewInit {
 
     @ContentChildren(NzCardTabComponent) tabList: QueryList<NzCardTabComponent>;
 
-    @ContentChildren(NzCardGridV3Directive) gridList: QueryList<NzCardGridV3Directive>;
+    @ContentChildren(NzCardGridDirective) gridList: QueryList<NzCardGridDirective>;
 
     @ContentChildren(NzCardActionComponent) actionList: QueryList<NzCardActionComponent>;
 

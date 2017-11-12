@@ -5,8 +5,110 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NgZorroAntdExtraModule } from 'ng-zorro-antd-extra';
+
+// region: zorro modules
+
+import {
+    // LoggerModule,
+    // NzLocaleModule,
+    NzButtonModule,
+    NzAlertModule,
+    NzBadgeModule,
+    // NzCalendarModule,
+    NzCascaderModule,
+    NzCheckboxModule,
+    NzDatePickerModule,
+    NzFormModule,
+    NzInputModule,
+    NzInputNumberModule,
+    NzGridModule,
+    NzMessageModule,
+    NzModalModule,
+    NzNotificationModule,
+    NzPaginationModule,
+    NzPopconfirmModule,
+    NzPopoverModule,
+    NzRadioModule,
+    NzRateModule,
+    NzSelectModule,
+    NzSpinModule,
+    NzSliderModule,
+    NzSwitchModule,
+    NzProgressModule,
+    NzTableModule,
+    NzTabsModule,
+    NzTagModule,
+    NzTimePickerModule,
+    NzUtilModule,
+    NzStepsModule,
+    NzDropDownModule,
+    NzMenuModule,
+    NzBreadCrumbModule,
+    NzLayoutModule,
+    NzRootModule,
+    NzCarouselModule,
+    // NzCardModule,
+    NzCollapseModule,
+    NzTimelineModule,
+    NzToolTipModule,
+    // NzBackTopModule,
+    // NzAffixModule,
+    // NzAnchorModule,
+    NzAvatarModule,
+    // SERVICES
+    NzNotificationService,
+    NzMessageService
+} from 'ng-zorro-antd';
+const ZORROMODULES = [
+    // LoggerModule,
+    // NzLocaleModule,
+    NzButtonModule,
+    NzAlertModule,
+    NzBadgeModule,
+    // NzCalendarModule,
+    NzCascaderModule,
+    NzCheckboxModule,
+    NzDatePickerModule,
+    NzFormModule,
+    NzInputModule,
+    NzInputNumberModule,
+    NzGridModule,
+    NzMessageModule,
+    NzModalModule,
+    NzNotificationModule,
+    NzPaginationModule,
+    NzPopconfirmModule,
+    NzPopoverModule,
+    NzRadioModule,
+    NzRateModule,
+    NzSelectModule,
+    NzSpinModule,
+    NzSliderModule,
+    NzSwitchModule,
+    NzProgressModule,
+    NzTableModule,
+    NzTabsModule,
+    NzTagModule,
+    NzTimePickerModule,
+    NzUtilModule,
+    NzStepsModule,
+    NzDropDownModule,
+    NzMenuModule,
+    NzBreadCrumbModule,
+    NzLayoutModule,
+    NzRootModule,
+    NzCarouselModule,
+    // NzCardModule,
+    NzCollapseModule,
+    NzTimelineModule,
+    NzToolTipModule,
+    // NzBackTopModule,
+    // NzAffixModule,
+    // NzAnchorModule,
+    NzAvatarModule
+];
+// endregion
 
 import { DemoHomeComponent } from './home.component';
 
@@ -21,19 +123,19 @@ import { DemoNzListVerticalComponent } from './nz-list/vertical.component';
 import { DemoNzListGridComponent } from './nz-list/grid.component';
 import { DemoNzListResponsiveComponent } from './nz-list/responsive.component';
 // nz-card
-import { DemoNzCardComponent } from './nz-card-v3/nz-card.component';
-import { DemoNzCardBasicComponent } from './nz-card-v3/basic.component';
-import { DemoNzCardTabComponent } from './nz-card-v3/tab.component';
-import { DemoNzCardInnerComponent } from './nz-card-v3/inner.component';
-import { DemoNzCardNoBoarderComponent } from './nz-card-v3/noborder.component';
-import { DemoNzCardSimpleComponent } from './nz-card-v3/simple.component';
-import { DemoNzCardCustomizedComponent } from './nz-card-v3/customized.component';
-import { DemoNzCardColumnComponent } from './nz-card-v3/column.component';
-import { DemoNzCardLoadingComponent } from './nz-card-v3/loading.component';
-import { DemoNzCardGridComponent } from './nz-card-v3/grid.component';
-import { DemoNzCardMoreComponent } from './nz-card-v3/more.component';
-import { DemoNzCardNoPaddingComponent } from './nz-card-v3/no-padding.component';
-import { DemoNzCardCompatibleComponent } from './nz-card-v3/compatible.component';
+import { DemoNzCardComponent } from './nz-card/nz-card.component';
+import { DemoNzCardBasicComponent } from './nz-card/basic.component';
+import { DemoNzCardTabComponent } from './nz-card/tab.component';
+import { DemoNzCardInnerComponent } from './nz-card/inner.component';
+import { DemoNzCardNoBoarderComponent } from './nz-card/noborder.component';
+import { DemoNzCardSimpleComponent } from './nz-card/simple.component';
+import { DemoNzCardCustomizedComponent } from './nz-card/customized.component';
+import { DemoNzCardColumnComponent } from './nz-card/column.component';
+import { DemoNzCardLoadingComponent } from './nz-card/loading.component';
+import { DemoNzCardGridComponent } from './nz-card/grid.component';
+import { DemoNzCardMoreComponent } from './nz-card/more.component';
+import { DemoNzCardNoPaddingComponent } from './nz-card/no-padding.component';
+import { DemoNzCardCompatibleComponent } from './nz-card/compatible.component';
 // nz-divider
 import { DemoNzDividerComponent } from './nz-divider/nz-divider.component';
 import { DemoNzDividerHorizontalComponent } from './nz-divider/horizontal.component';
@@ -53,7 +155,7 @@ import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component'
         ], { useHash: true }),
 
         BrowserAnimationsModule,
-        NgZorroAntdModule.forRoot(),
+        ...ZORROMODULES,
         NgZorroAntdExtraModule.forRoot()
     ],
     declarations: [
@@ -85,6 +187,11 @@ import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component'
         DemoNzDividerComponent,
         DemoNzDividerHorizontalComponent,
         DemoNzDividerVerticalComponent
+    ],
+    providers: [
+        // Services
+        NzNotificationService,
+        NzMessageService
     ],
     bootstrap: [AppComponent]
 })

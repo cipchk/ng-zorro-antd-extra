@@ -4,8 +4,8 @@ import { NzMessageService } from 'ng-zorro-antd';
 @Component({
   selector: 'demo-nz-card-tab',
   template: `
-    <h4>tab <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card-v3/tab.component.ts" target="_blank">source</a></h4>
-    <nz-card-v3 [nzTitle]="'Card title'" style="margin-bottom: 16px">
+    <h4>tab <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card/tab.component.ts" target="_blank">source</a></h4>
+    <nz-card [nzTitle]="'Card title'" style="margin-bottom: 16px">
         <ng-template #extra>
             <a (click)="msg.success('more')">More</a>
         </ng-template>
@@ -15,8 +15,8 @@ import { NzMessageService } from 'ng-zorro-antd';
         <nz-card-tab [nzTabHeading]="'tab2'">
             tab2 content
         </nz-card-tab>
-    </nz-card-v3>
-    <nz-card-v3>
+    </nz-card>
+    <nz-card>
         <nz-card-tab *ngFor="let tab of tabs" [nzTabHeading]="nzTabHeading">
             <ng-template #nzTabHeading>
                 {{tab.name}}
@@ -24,7 +24,7 @@ import { NzMessageService } from 'ng-zorro-antd';
             </ng-template>
             tab1 content
         </nz-card-tab>
-    </nz-card-v3>
+    </nz-card>
 `
 })
 export class DemoNzCardTabComponent {

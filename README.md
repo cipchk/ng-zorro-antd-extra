@@ -20,7 +20,7 @@
 | Name    | API  | Status  |
 | ------- | ------------- | -------- |
 | `nz-list` | [link](./src/nz-list/index.md) | Finished |
-| `nz-card-v3` | [link](./src/nz-card-v3/index.md) | Finished |
+| `nz-card` | [link](./src/nz-card/index.md) | Finished |
 | `nz-divider` | [link](./src/nz-divider/index.md) | Finished |
 
 ## Usage & Installation
@@ -33,15 +33,15 @@ npm install ng-zorro-antd-extra --save
 
 Import the `NzListModule` in to your root `AppModule`.
 
+**Important:** Don't use `NgZorroAntdModule.forRoot()` load all modules, should be like [app.modules.ts](./demo/src/app/app.module.ts) method.
+
 ```typescript
 import { NgZorroAntdExtraModule } from 'ng-zorro-antd-extra';
 // or
-// import { NzListModule, NzCardV3Module, NzDividerModule } from 'ng-zorro-antd-extra';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+// import { NzListModule, NzCardModule, NzDividerModule } from 'ng-zorro-antd-extra';
 
 @NgModule({
     imports: [
-        NgZorroAntdModule.forRoot(),
         NgZorroAntdExtraModule.forRoot()
     ]
 })

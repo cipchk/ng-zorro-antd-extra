@@ -4,8 +4,8 @@ import { NzMessageService } from 'ng-zorro-antd';
 @Component({
   selector: 'demo-nz-card-more',
   template: `
-    <h4>Support more content configuration <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card-v3/more.component.ts" target="_blank">source</a></h4>
-    <nz-card-v3 style="width: 300px">
+    <h4>Support more content configuration <a href="https://github.com/cipchk/ng-zorro-antd-extra/blob/master/demo/src/app/nz-card/more.component.ts" target="_blank">source</a></h4>
+    <nz-card style="width: 300px">
         <ng-template #cover>
             <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png">
         </ng-template>
@@ -17,7 +17,7 @@ import { NzMessageService } from 'ng-zorro-antd';
         <nz-card-action><i class="anticon anticon-setting" (click)="msg.info('setting')"></i></nz-card-action>
         <nz-card-action><i class="anticon anticon-edit" (click)="msg.info('edit')"></i></nz-card-action>
         <nz-card-action><i class="anticon anticon-ellipsis" (click)="msg.info('more')"></i></nz-card-action>
-    </nz-card-v3>
+    </nz-card>
 `
 })
 export class DemoNzCardMoreComponent {
