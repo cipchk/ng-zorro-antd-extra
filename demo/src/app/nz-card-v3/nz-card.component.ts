@@ -43,9 +43,10 @@ import { Component } from '@angular/core';
     </div>
     <div nz-row [nzGutter]="32">
         <div nz-col [nzSpan]="8">
-            <demo-nz-card-compatible></demo-nz-card-compatible>
+            <demo-nz-card-no-padding></demo-nz-card-no-padding>
         </div>
         <div nz-col [nzSpan]="8">
+            <demo-nz-card-compatible></demo-nz-card-compatible>
         </div>
         <div nz-col [nzSpan]="8">
         </div>

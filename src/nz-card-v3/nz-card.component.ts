@@ -23,6 +23,8 @@ export class NzCardV3Component implements OnInit, OnChanges, AfterViewInit {
 
     @Input() nzHoverable: boolean;
 
+    @Input() nzNoPadding: boolean;
+
     // @deprecated 过期属性，请使用 `nzHoverable`
     @Input() nzNoHovering: boolean;
 
@@ -82,9 +84,9 @@ export class NzCardV3Component implements OnInit, OnChanges, AfterViewInit {
         this._classList = [
             this._prefixCls,
             this.nzLoading && `${this._prefixCls}-loading`,
-            this.nzBordered && `${this._prefixCls}-bordered`,
+            typeof this.nzBordered !== 'undefined' && this.nzBordered !== false && `${this._prefixCls}-bordered`,
             this.getCompatibleHoverable() && `${this._prefixCls}-hoverable`,
-            // wider-padding
+            typeof this.nzNoPadding !== 'undefined' && this.nzNoPadding !== false && `${this._prefixCls}-no-padding`,
             // padding-transition
             // transition
             this.gridList && this.gridList.length && `${this._prefixCls}-contain-grid`,

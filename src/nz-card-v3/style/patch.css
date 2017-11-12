@@ -2,6 +2,9 @@ nz-card-v3,
 nz-card-v3 nz-card-meta {
   display: block;
 }
+nz-card-v3.ant-card-no-padding .ant-card-body {
+  padding: 0;
+}
 nz-card-v3 .ant-tabs-large .ant-tabs-tab {
   padding: 16px;
 }
