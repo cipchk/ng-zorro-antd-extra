@@ -1,21 +1,29 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NzSpinModule, NzGridModule, NzAvatarModule } from 'ng-zorro-antd';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { NzListComponent } from './components/nz-list.component';
-import { NzListItemComponent } from './components/nz-list-item.component';
-import { NzListItemActionComponent } from './components/nz-list-item-action.component';
-import { NzListItemMetaComponent } from './components/nz-list-item-meta.component';
+import { NzListModule } from './nz-list/nz-list.module';
+import { NzCardV3Module } from './nz-card-v3/nz-card.module';
+import { NzDividerModule } from './nz-divider/nz-divider.module';
 
-export { NzListComponent } from './components/nz-list.component';
-export { NzListItemComponent } from './components/nz-list-item.component';
-export { NzListItemActionComponent } from './components/nz-list-item-action.component';
-export { NzListItemMetaComponent } from './components/nz-list-item-meta.component';
+export * from './nz-list';
+export * from './nz-card-v3';
+export * from './nz-divider';
+
+const MODULES = [
+    NzListModule,
+    NzCardV3Module,
+    NzDividerModule
+];
 
 @NgModule({
-    imports:        [ CommonModule, NzSpinModule, NzGridModule, NzAvatarModule ],
-    declarations:   [ NzListComponent, NzListItemComponent, NzListItemMetaComponent, NzListItemActionComponent ],
-    exports:        [ NzListComponent, NzListItemComponent, NzListItemMetaComponent, NzListItemActionComponent ]
+    imports: MODULES,
+    exports: MODULES
 })
-export class NzListModule {
+export class NgZorroAntdExtraRootModule {
+}
+
+@NgModule({ exports: MODULES })
+export class NgZorroAntdExtraModule {
+    public static forRoot(): ModuleWithProviders {
+        return { ngModule: NgZorroAntdExtraRootModule };
+    }
 }

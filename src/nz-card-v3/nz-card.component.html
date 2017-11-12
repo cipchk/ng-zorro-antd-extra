@@ -1,0 +1,49 @@
+<div *ngIf="title || extra || tabList?.length > 0" class="ant-card-head">
+    <div class="ant-card-head-wrapper">
+        <div *ngIf="title" class="ant-card-head-title">
+            <ng-container *ngIf="_title; else _titleTpl">{{ _title }}</ng-container>
+        </div>
+        <div *ngIf="extra" class="ant-card-extra">
+            <ng-template [ngTemplateOutlet]="extra"></ng-template>
+        </div>
+    </div>
+    <nz-tabset *ngIf="tabList?.length > 0" [nzSize]="'large'" (nzSelectChange)="_tabChange($event)" class="ant-tabs-large">
+        <nz-tab *ngFor="let i of tabList">
+            <ng-template #nzTabHeading>
+                <ng-container *ngIf="i._title; else i._titleTpl">{{ i._title }}</ng-container>
+            </ng-template>
+        </nz-tab>
+    </nz-tabset>
+</div>
+<div *ngIf="cover" class="ant-card-cover"><ng-template [ngTemplateOutlet]="cover"></ng-template></div>
+<div class="ant-card-body" *ngIf="nzLoading">
+    <div class="ant-card-loading-content">
+        <p class="ant-card-loading-block" style="width: 94%;"></p>
+        <p>
+            <span class="ant-card-loading-block" style="width: 28%;"></span>
+            <span class="ant-card-loading-block" style="width: 62%;"></span>
+        </p>
+        <p>
+            <span class="ant-card-loading-block" style="width: 22%;"></span>
+            <span class="ant-card-loading-block" style="width: 66%;"></span>
+        </p>
+        <p>
+            <span class="ant-card-loading-block" style="width: 56%;"></span>
+            <span class="ant-card-loading-block" style="width: 39%;"></span>
+        </p>
+        <p>
+            <span class="ant-card-loading-block" style="width: 21%;"></span>
+            <span class="ant-card-loading-block" style="width: 15%;"></span>
+            <span class="ant-card-loading-block" style="width: 40%;"></span>
+        </p>
+    </div>
+</div>
+<div class="ant-card-body" *ngIf="!nzLoading">
+    <ng-template [ngTemplateOutlet]="body"></ng-template>
+    <ng-content></ng-content>
+</div>
+<ul *ngIf="actionList?.length>0" class="ant-card-actions">
+    <li *ngFor="let i of actionList" [ngStyle]="{'width.%':100/actionList.length}">
+        <span><ng-template [ngTemplateOutlet]="i.tpl"></ng-template></span>
+    </li>
+</ul>

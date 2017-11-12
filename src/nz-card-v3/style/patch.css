@@ -1,0 +1,10 @@
+nz-card-v3,
+nz-card-v3 nz-card-meta {
+  display: block;
+}
+nz-card-v3 .ant-tabs-large .ant-tabs-tab {
+  padding: 16px;
+}
+nz-card-v3 .ant-tabs-nav .ant-tabs-tab-active {
+  font-weight: 500;
+}

@@ -1,27 +1,26 @@
 import { Component, Input, ContentChild, TemplateRef, HostBinding } from '@angular/core';
 
 @Component({
-    selector: 'nz-list-item-meta',
+    selector: 'nz-card-meta',
     template: `
-    <div *ngIf="avatar" class="ant-list-item-meta-avatar">
-        <ng-template #defaultAvatarContent><nz-avatar [nzSrc]="_avatar"></nz-avatar></ng-template>
-        <ng-template [ngTemplateOutlet]="_avatarTpl || defaultAvatarContent"></ng-template>
-    </div>
-    <div *ngIf="title || desc" class="ant-list-item-meta-content">
-        <h4 *ngIf="title" class="ant-list-item-meta-title">
-            <ng-template #defaultTitleContent>{{_title}}</ng-template>
-            <ng-template [ngTemplateOutlet]="_titleTpl || defaultTitleContent"></ng-template>
-        </h4>
-        <div *ngIf="desc" class="ant-list-item-meta-description">
-            <ng-template #defaultDescContent>{{_desc}}</ng-template>
-            <ng-template [ngTemplateOutlet]="_descTpl || defaultDescContent"></ng-template>
+    <div class="ant-card-meta-content">
+        <div *ngIf="avatar" class="ant-card-meta-avatar">
+            <ng-container *ngIf="_avatar; else _avatarTpl"><nz-avatar [nzSrc]="_avatar"></nz-avatar></ng-container>
+        </div>
+        <div *ngIf="title || desc" class="ant-card-meta-detail">
+            <h4 *ngIf="title" class="ant-card-meta-title">
+                <ng-container *ngIf="_title; else _titleTpl">{{ _title }}</ng-container>
+            </h4>
+            <div *ngIf="desc" class="ant-card-meta-description">
+                <ng-container *ngIf="_desc; else _descTpl">{{ _desc }}</ng-container>
+            </div>
         </div>
     </div>
     `
 })
-export class NzListItemMetaComponent {
+export class NzCardMetaComponent {
 
-    @HostBinding('class.ant-list-item-meta')
+    @HostBinding('class.ant-card-meta')
     _nzListItemMeta = true;
 
     avatar = false;

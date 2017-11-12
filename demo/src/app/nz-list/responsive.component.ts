@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'demo-responsive',
+  selector: 'demo-nz-list-responsive',
   template: `
     <nz-card>
         <ng-template #title>Responsive</ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzGrid]="{gutter: 16, xs: 24, sm: 12, md: 6, lg: 6, xl: 4 }">
-                <ng-template #nzItem let-item>
+                <ng-template #item let-item>
                     <nz-list-item>
                         <nz-card>
                             <ng-template #title>{{item.title}}</ng-template>
@@ -20,7 +20,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     </nz-card>
 `
 })
-export class DemoResponsiveComponent {
+export class DemoNzListResponsiveComponent {
   data = [
     {
       title: 'Title 1',

@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'demo-vertical',
+  selector: 'demo-nz-list-vertical',
   template: `
     <nz-card>
         <ng-template #title>Basic list</ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzItemLayout]="'vertical'">
-                <ng-template #nzItem let-item>
+                <ng-template #item let-item>
                     <nz-list-item [nzContent]="item.content" [nzExtra]="nzExtra">
                         <nz-list-item-action><i class="anticon anticon-star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
                         <nz-list-item-action><i class="anticon anticon-like-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
@@ -23,7 +23,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
                         </ng-template>
                     </nz-list-item>
                 </ng-template>
-                <ng-template #nzPagination>
+                <ng-template #pagination>
                     <nz-pagination [nzPageIndex]="1" [nzTotal]="50"></nz-pagination>
                 </ng-template>
             </nz-list>
@@ -31,7 +31,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     </nz-card>
 `
 })
-export class DemoVerticalComponent {
+export class DemoNzListVerticalComponent {
     data = new Array(5).fill({}).map((i, index) => {
         return {
             href: 'http://ant.design',

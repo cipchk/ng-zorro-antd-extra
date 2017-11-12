@@ -30,8 +30,7 @@ export interface NzListGrid {
         </ng-container>
     </ng-template>
     <div *ngIf="header" class="ant-list-header">
-        <ng-template #defaultHeaderContent>{{_header}}</ng-template>
-        <ng-template [ngTemplateOutlet]="_headerTpl || defaultHeaderContent"></ng-template>
+        <ng-container *ngIf="_header; else _headerTpl">{{ _header }}</ng-container>
     </div>
     <nz-spin [nzSpinning]="nzLoading">
         <div *ngIf="nzGrid; else itemsTpl" nz-row [nzGutter]="nzGrid.gutter">
@@ -49,8 +48,7 @@ export interface NzListGrid {
         <ng-template [ngTemplateOutlet]="nzPagination"></ng-template>
     </div>
     <div *ngIf="footer" class="ant-list-footer">
-        <ng-template #defaultFooterContent>{{_footer}}</ng-template>
-        <ng-template [ngTemplateOutlet]="_footerTpl || defaultFooterContent"></ng-template>
+        <ng-container *ngIf="_footer; else _footerTpl">{{ _footer }}</ng-container>
     </div>
     `,
     styleUrls: [
@@ -93,12 +91,12 @@ export class NzListComponent implements OnChanges, OnInit {
         this.footer = !!value;
     }
 
-    @ContentChild('nzItem') nzItem: TemplateRef<any>;
+    @ContentChild('item') nzItem: TemplateRef<any>;
     @Input() nzSize: 'default' | 'small' | 'large' = 'default';
     @Input() nzItemLayout: 'vertical' | 'horizontal' = 'horizontal';
     @Input() nzLoading = false;
-    @ContentChild('nzLoadMore') nzLoadMore: TemplateRef<any>;
-    @ContentChild('nzPagination') nzPagination: TemplateRef<any>;
+    @ContentChild('loadMore') nzLoadMore: TemplateRef<any>;
+    @ContentChild('pagination') nzPagination: TemplateRef<any>;
     @Input() nzSplit = true;
     // endregion
 

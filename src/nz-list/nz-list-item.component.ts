@@ -7,12 +7,11 @@ import { NzListItemActionComponent } from './nz-list-item-action.component';
     <ng-template #childTpl><ng-content></ng-content></ng-template>
     <ng-template #contentTpl>
         <div *ngIf="content" class="ant-list-item-content">
-            <ng-template #defaultContentContent>{{_content}}</ng-template>
-            <ng-template [ngTemplateOutlet]="_contentTpl || defaultContentContent"></ng-template>
+            <ng-container *ngIf="_content; else _contentTpl">{{ _content }}</ng-container>
         </div>
     </ng-template>
     <ng-template #actionTpl>
-        <ul #actionTpl *ngIf="_actions && _actions.length > 0" class="ant-list-item-action">
+        <ul #actionTpl *ngIf="_actions?.length > 0" class="ant-list-item-action">
             <li *ngFor="let i of _actions; let idx = index">
                 <ng-template [ngTemplateOutlet]="i.template"></ng-template>
                 <em *ngIf="idx!==_actions.length-1" class="ant-list-item-action-split"></em>
@@ -27,8 +26,7 @@ import { NzListItemActionComponent } from './nz-list-item-action.component';
     <div *ngIf="extra; else mainTpl" class="ant-list-item-extra-wrap">
         <div class="ant-list-item-main"><ng-template [ngTemplateOutlet]="mainTpl"></ng-template></div>
         <div class="ant-list-item-extra">
-            <ng-template #defaultExtraContent>{{_extra}}</ng-template>
-            <ng-template [ngTemplateOutlet]="_extraTpl || defaultExtraContent"></ng-template>
+            <ng-container *ngIf="_extra; else _extraTpl">{{ _extra }}</ng-container>
         </div>
     </div>
     `

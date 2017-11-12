@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'demo-grid',
+  selector: 'demo-nz-list-grid',
   template: `
     <nz-card>
         <ng-template #title>Grid</ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzGrid]="{gutter: 16, span: 6}">
-                <ng-template #nzItem let-item>
+                <ng-template #item let-item>
                     <nz-list-item>
                         <nz-card>
                             <ng-template #title>{{item.title}}</ng-template>
@@ -20,7 +20,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     </nz-card>
 `
 })
-export class DemoGridComponent {
+export class DemoNzListGridComponent {
   data = [
     {
       title: 'Title 1',

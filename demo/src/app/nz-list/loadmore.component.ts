@@ -5,13 +5,13 @@ import { NzMessageService } from 'ng-zorro-antd';
 const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
 
 @Component({
-  selector: 'demo-loadmore',
+  selector: 'demo-nz-list-loadmore',
   template: `
     <nz-card>
         <ng-template #title>Basic list</ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzItemLayout]="'horizontal'" [nzLoading]="loading">
-                <ng-template #nzItem let-item>
+                <ng-template #item let-item>
                     <nz-list-item>
                         <nz-list-item-action><a (click)="edit(item)">edit</a></nz-list-item-action>
                         <nz-list-item-action><a (click)="edit(item)">more</a></nz-list-item-action>
@@ -26,7 +26,7 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
                         <div>content</div>
                     </nz-list-item>
                 </ng-template>
-                <ng-template #nzLoadMore>
+                <ng-template #loadMore>
                     <div *ngIf="showLoadMore" style="text-align: center; margin-top: 12px; height: 32px; line-height: 32px;">
                         <button nz-button *ngIf="!loadingMore" (click)="loadMore()">loading more</button>
                         <nz-spin *ngIf="loadingMore" [nzSpinning]="loadingMore"></nz-spin>
@@ -37,7 +37,7 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
     </nz-card>
 `
 })
-export class DemoLoadMoreComponent implements OnInit {
+export class DemoNzListLoadMoreComponent implements OnInit {
     data = [];
     loading = false;
     loadingMore = false;

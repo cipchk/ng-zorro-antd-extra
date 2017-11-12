@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'demo-basic',
+  selector: 'demo-nz-list-basic',
   template: `
     <nz-card>
         <ng-template #title>Basic list</ng-template>
         <ng-template #body>
             <nz-list [nzDataSource]="data" [nzItemLayout]="'horizontal'">
-                <ng-template #nzItem let-item>
+                <ng-template #item let-item>
                     <nz-list-item>
                         <nz-list-item-meta
                             [nzTitle]="nzTitle"
@@ -24,7 +24,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     </nz-card>
 `
 })
-export class DemoBasicComponent {
+export class DemoNzListBasicComponent {
   data = [
     {
       title: 'Ant Design Title 1'

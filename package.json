@@ -1,24 +1,24 @@
 {
-  "name": "ng-list-antd",
-  "version": "0.0.1-beta.4",
+  "name": "ng-zorro-antd-extra",
+  "version": "1.0.0-beta.0",
   "main": "index.js",
   "typings": "index.d.ts",
-  "description": "A simplify list of antd.",
+  "description": "ng-zorro-antd extra episode!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cipchk/ng-list-antd.git"
+    "url": "git+https://github.com/cipchk/ng-zorro-antd-extra.git"
   },
   "keywords": [
-    "ng-list-antd",
+    "ng-zorro-antd-extra",
     "list antd",
     "antd"
   ],
   "author": "cipchk <cipchk>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cipchk/ng-list-antd/issues"
+    "url": "https://github.com/cipchk/ng-zorro-antd-extra/issues"
   },
-  "homepage": "https://github.com/cipchk/ng-list-antd#readme",
+  "homepage": "https://github.com/cipchk/ng-zorro-antd-extra#readme",
   "scripts": {
     "demo.serve": "run-s build link demo.build",
     "demo.gh-pages": "run-s build demo.build demo.deploy",

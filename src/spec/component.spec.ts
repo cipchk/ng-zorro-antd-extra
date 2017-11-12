@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NzListModule } from 'ng-list-antd';
+import { NzListModule } from 'ng-zorro-antd-extra';
 
 const html = ``;
 
-describe('Component: ng-list-antd', () => {
+describe('Component: ng-zorro-antd-extra', () => {
   let fixture: ComponentFixture<any>;
   let context: TestNGComponent;
 
@@ -26,7 +26,7 @@ describe('Component: ng-list-antd', () => {
 });
 
 @Component({
-  selector: 'ng-list-antd-test',
+  selector: 'ng-zorro-antd-extra-test',
   template: ''
 })
 class TestNGComponent {
