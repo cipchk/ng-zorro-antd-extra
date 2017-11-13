@@ -25,6 +25,8 @@ export class NzCardComponent implements OnInit, OnChanges, AfterViewInit {
 
     @Input() nzNoPadding: boolean;
 
+    @Input() nzBodyStyle: Object;
+
     // @deprecated 过期属性，请使用 `nzHoverable`
     @Input() nzNoHovering: boolean;
 

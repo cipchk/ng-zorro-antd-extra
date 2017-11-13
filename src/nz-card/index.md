@@ -16,6 +16,7 @@
 | #extra | `TemplateRef<any>` |  | 卡片右上角的操作区域 |
 | #cover | `TemplateRef<any>` |  | 卡片封面区域 |
 | #body | `TemplateRef<any>` |  | 内容区域，默认情况下也可以无须指定，因为 `<ng-content>` 内容都被认为是内容区域 |
+| nzBodyStyle | `Object` |  | 内容区域样式列表 |
 | nzTabChange | `EventEmitter` |  | 点击选项卡事件回调，当内容包括 `nz-card-tab` 组件时有效 |
 | nzNoPadding | `boolean` |  | 无内边距 `body`，虽 antd for react 无该属性，但实际项目中它很常用 |
 

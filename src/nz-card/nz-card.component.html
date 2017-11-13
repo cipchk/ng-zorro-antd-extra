@@ -38,7 +38,7 @@
         </p>
     </div>
 </div>
-<div class="ant-card-body" *ngIf="!nzLoading">
+<div class="ant-card-body" *ngIf="!nzLoading" [ngStyle]="nzBodyStyle">
     <ng-template [ngTemplateOutlet]="body"></ng-template>
     <ng-content></ng-content>
 </div>
