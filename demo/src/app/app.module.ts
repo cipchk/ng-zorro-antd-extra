@@ -140,6 +140,8 @@ import { DemoNzCardCompatibleComponent } from './nz-card/compatible.component';
 import { DemoNzDividerComponent } from './nz-divider/nz-divider.component';
 import { DemoNzDividerHorizontalComponent } from './nz-divider/horizontal.component';
 import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component';
+// nz-icon
+import { DemoNzIconComponent } from './nz-icon/nz-icon.component';
 
 @NgModule({
     imports: [
@@ -151,7 +153,8 @@ import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component'
             { path: '', component: DemoHomeComponent },
             { path: 'list', component: DemoNzListComponent },
             { path: 'card', component: DemoNzCardComponent },
-            { path: 'divider', component: DemoNzDividerComponent }
+            { path: 'divider', component: DemoNzDividerComponent },
+            { path: 'icon', component: DemoNzIconComponent }
         ], { useHash: true }),
 
         BrowserAnimationsModule,
@@ -186,7 +189,9 @@ import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component'
         // nz-divider
         DemoNzDividerComponent,
         DemoNzDividerHorizontalComponent,
-        DemoNzDividerVerticalComponent
+        DemoNzDividerVerticalComponent,
+        // nz-icon
+        DemoNzIconComponent
     ],
     providers: [
         // Services

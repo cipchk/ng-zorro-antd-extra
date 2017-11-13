@@ -19,6 +19,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/divider">nz-divider</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/icon">nz-icon</a>
+                </li>
             </ul>
         </div>
     </nav>

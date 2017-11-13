@@ -22,6 +22,7 @@
 | `nz-list` | [link](./src/nz-list/index.md) | Finished |
 | `nz-card` | [link](./src/nz-card/index.md) | Finished |
 | `nz-divider` | [link](./src/nz-divider/index.md) | Finished |
+| `nz-icon` | [link](./src/nz-icon/index.md) | Finished |
 
 ## Usage & Installation
 
