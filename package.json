@@ -1,6 +1,6 @@
 {
   "name": "ng-zorro-antd-extra",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "main": "index.js",
   "typings": "index.d.ts",
   "description": "ng-zorro-antd extra episode!",
