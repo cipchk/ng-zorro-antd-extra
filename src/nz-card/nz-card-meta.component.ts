@@ -8,9 +8,9 @@ import { Component, Input, ContentChild, TemplateRef, HostBinding } from '@angul
             <ng-container *ngIf="_avatar; else _avatarTpl"><nz-avatar [nzSrc]="_avatar"></nz-avatar></ng-container>
         </div>
         <div *ngIf="title || desc" class="ant-card-meta-detail">
-            <h4 *ngIf="title" class="ant-card-meta-title">
+            <div *ngIf="title" class="ant-card-meta-title">
                 <ng-container *ngIf="_title; else _titleTpl">{{ _title }}</ng-container>
-            </h4>
+            </div>
             <div *ngIf="desc" class="ant-card-meta-description">
                 <ng-container *ngIf="_desc; else _descTpl">{{ _desc }}</ng-container>
             </div>
