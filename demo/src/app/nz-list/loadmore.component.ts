@@ -28,7 +28,7 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
                 </ng-template>
                 <ng-template #loadMore>
                     <div *ngIf="showLoadMore" style="text-align: center; margin-top: 12px; height: 32px; line-height: 32px;">
-                        <button nz-button *ngIf="!loadingMore" (click)="loadMore()">loading more</button>
+                        <button nz-button *ngIf="!loadingMore" (click)="handleLoadMore()">loading more</button>
                         <nz-spin *ngIf="loadingMore" [nzSpinning]="loadingMore"></nz-spin>
                     </div>
                 </ng-template>
@@ -41,7 +41,7 @@ export class DemoNzListLoadMoreComponent implements OnInit {
     data = [];
     loading = false;
     loadingMore = false;
-    showLoadMore = true;
+    showLoadMore = false;
     pi = 1;
     ps = 5;
     show_max_pi = 5;
@@ -70,7 +70,7 @@ export class DemoNzListLoadMoreComponent implements OnInit {
         });
     }
 
-    loadMore() {
+    handleLoadMore() {
         ++this.pi;
         this.getData();
     }

@@ -13,7 +13,7 @@
 
 ## Dependencies
 
-+ `ng-zorro-antd` **^0.5.0**
++ `ng-zorro-antd` **^0.6.0**
 
 ## INCLUCE COMPONENTS
 
