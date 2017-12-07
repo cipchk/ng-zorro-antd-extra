@@ -4,8 +4,7 @@ import { Component, ViewEncapsulation, Input, ElementRef, Renderer2, SimpleChang
     selector: 'nz-icon',
     template: ``,
     styleUrls: [
-        // todo: ngm-cli not supported less
-        './style/patch.css'
+        './style/patch.less'
     ],
     encapsulation: ViewEncapsulation.None
 })

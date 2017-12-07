@@ -7,9 +7,8 @@ import { NzCardActionComponent } from './nz-card-action.component';
     selector: 'nz-card',
     templateUrl: './nz-card.component.html',
     styleUrls: [
-        // todo: ngm-cli not supported less
-        './style/index.css',
-        './style/patch.css'
+        './style/index.less',
+        './style/patch.less'
     ],
     encapsulation: ViewEncapsulation.None
 })

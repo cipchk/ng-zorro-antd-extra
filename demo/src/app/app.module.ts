@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NgZorroAntdExtraModule } from 'ng-zorro-antd-extra';
+import { NgZorroAntdExtraModule } from '../../../src/index';
 
 // region: zorro modules
 

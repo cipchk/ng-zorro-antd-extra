@@ -8,9 +8,8 @@ import { Component, ViewEncapsulation, TemplateRef, Input, ElementRef, Renderer2
     </span>
     `,
     styleUrls: [
-        // todo: ngm-cli not supported less
-        './style/index.css',
-        './style/patch.css'
+        './style/index.less',
+        './style/patch.less'
     ],
     encapsulation: ViewEncapsulation.None
 })
