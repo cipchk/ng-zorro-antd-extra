@@ -7,7 +7,7 @@
             <ng-template [ngTemplateOutlet]="extra"></ng-template>
         </div>
     </div>
-    <nz-tabset *ngIf="tabList?.length > 0" [nzSize]="'large'" (nzSelectChange)="_tabChange($event)" class="ant-tabs-large">
+    <nz-tabset *ngIf="tabList?.length > 0" [nzSize]="'large'" [nzSelectedIndex]="nzTabSelectedIndex" (nzSelectChange)="_tabChange($event)" class="ant-tabs-large">
         <nz-tab *ngFor="let i of tabList">
             <ng-template #nzTabHeading>
                 <ng-container *ngIf="i._title; else i._titleTpl">{{ i._title }}</ng-container>

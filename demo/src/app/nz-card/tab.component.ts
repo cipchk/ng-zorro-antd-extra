@@ -16,7 +16,7 @@ import { NzMessageService } from 'ng-zorro-antd';
             tab2 content
         </nz-card-tab>
     </nz-card>
-    <nz-card>
+    <nz-card [nzTabSelectedIndex]="1">
         <nz-card-tab *ngFor="let tab of tabs" [nzTabHeading]="nzTabHeading">
             <ng-template #nzTabHeading>
                 {{tab.name}}

@@ -53,6 +53,8 @@ export class NzCardComponent implements OnInit, OnChanges, AfterViewInit {
 
     @ContentChild('body') body: TemplateRef<any>;
 
+    @Input() nzTabSelectedIndex = 0;
+
     @Output() nzTabChange: EventEmitter<any> = new EventEmitter<any>(true);
 
     @ContentChildren(NzCardTabComponent) tabList: QueryList<NzCardTabComponent>;
