@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
         <nz-list-item><a [routerLink]="['/card']">nz-card</a></nz-list-item>
         <nz-list-item><a [routerLink]="['/divider']">nz-divider</a></nz-list-item>
         <nz-list-item><a [routerLink]="['/icon']">nz-icon</a></nz-list-item>
+        <nz-list-item><a [routerLink]="['/radio-extra']">nz-radio-extra</a></nz-list-item>
     </nz-list>
     `
 })

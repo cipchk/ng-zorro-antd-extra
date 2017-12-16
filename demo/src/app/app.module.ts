@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -142,19 +143,23 @@ import { DemoNzDividerHorizontalComponent } from './nz-divider/horizontal.compon
 import { DemoNzDividerVerticalComponent } from './nz-divider/vertical.component';
 // nz-icon
 import { DemoNzIconComponent } from './nz-icon/nz-icon.component';
+// nz-radio-extra
+import { DemoNzRadioExtraComponent } from './nz-radio-extra/nz-radio-extra.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         CommonModule,
         HttpClientModule,
+        FormsModule,
 
         RouterModule.forRoot([
             { path: '', component: DemoHomeComponent },
             { path: 'list', component: DemoNzListComponent },
             { path: 'card', component: DemoNzCardComponent },
             { path: 'divider', component: DemoNzDividerComponent },
-            { path: 'icon', component: DemoNzIconComponent }
+            { path: 'icon', component: DemoNzIconComponent },
+            { path: 'radio-extra', component: DemoNzRadioExtraComponent }
         ], { useHash: true }),
 
         BrowserAnimationsModule,
@@ -191,7 +196,9 @@ import { DemoNzIconComponent } from './nz-icon/nz-icon.component';
         DemoNzDividerHorizontalComponent,
         DemoNzDividerVerticalComponent,
         // nz-icon
-        DemoNzIconComponent
+        DemoNzIconComponent,
+        // nz-radio
+        DemoNzRadioExtraComponent
     ],
     providers: [
         // Services
