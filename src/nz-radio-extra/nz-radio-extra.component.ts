@@ -11,7 +11,7 @@ import {
   } from '@angular/core';
 
   import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-  import { toBoolean } from '../util/convert';
+  import { toBoolean, deprecation } from '../util/convert';
 
   @Component({
     selector     : '[nz-radio-extra]',
@@ -111,6 +111,7 @@ import {
     }
 
     constructor(private _elementRef: ElementRef, public _renderer: Renderer2) {
+      deprecation(`nz-radio 已支持允许独立使用\n https://ng.ant.design/#/components/radio`);
       this._el = this._elementRef.nativeElement;
     }
 

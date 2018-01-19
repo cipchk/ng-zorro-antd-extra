@@ -23,7 +23,7 @@
 | `nz-card` | [link](./src/nz-card/index.md) | Finished |
 | `nz-divider` | [link](./src/nz-divider/index.md) | Finished |
 | `nz-icon` | [link](./src/nz-icon/index.md) | Finished |
-| `nz-radio-extra` | [link](./src/nz-radio-extra/index.md) | Finished |
+| `nz-radio-extra` | [link](./src/nz-radio-extra/index.md) | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Deprecated** |
 
 ## Usage & Installation
 
